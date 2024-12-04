@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>命令行打字练习</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 选择类别页面 -->
+        <div id="categoryPage" class="page active">
+            <h1 class="main-title">命令行打字练习</h1>
+            <div class="category-selector">
+                <h2>选择练习类别</h2>
+                <div class="category-buttons">
+                    <button data-category="linux_basic" class="category-btn">Linux 基础命令</button>
+                    <button data-category="linux_advanced" class="category-btn">Linux 高级命令</button>
+                    <button data-category="powershell" class="category-btn">PowerShell</button>
+                    <button data-category="git" class="category-btn">Git 基础</button>
+                    <button data-category="git_advanced" class="category-btn">Git 高级</button>
+                    <button data-category="docker" class="category-btn">Docker</button>
+                    <button data-category="nodejs" class="category-btn">Node.js</button>
+                    <button data-category="system_monitor" class="category-btn">系统监控</button>
+                    <button data-category="network" class="category-btn">网络工具</button>
+                    <button data-category="all" class="category-btn">所有命令</button>
+                </div>
+                <button id="showOverviewBtn" class="overview-btn">查看命令总览</button>
+            </div>
+        </div>
+
+        <!-- 练习页面 -->
+        <div id="practicePage" class="page">
+            <div class="practice-header">
+                <button id="backToCategories" class="back-btn">返回类别选择</button>
+                <h2 class="current-category">当前类别：<span></span></h2>
+            </div>
+            <div class="terminal">
+                <div class="terminal-header">
+                    命令行打字练习
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="output-text"></div>
+                    <div class="input-line">
+                        <span class="prompt">$</span>
+                        <input type="text" id="commandInput" autofocus>
+                    </div>
+                </div>
+            </div>
+            <div class="stats">
+                <div>正确率：<span id="accuracy">100%</span></div>
+                <div>速度：<span id="wpm">0</span> WPM</div>
+            </div>
+        </div>
+
+        <!-- 命令总览模态框 -->
+        <div id="overviewModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>命令总览</h2>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="category-tabs"></div>
+                    <div class="commands-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

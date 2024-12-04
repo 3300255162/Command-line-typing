@@ -1,0 +1,3 @@
+mkdir cli-typing-practice
+cd cli-typing-practice
+touch index.html style.css script.js 
